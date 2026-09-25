@@ -190,7 +190,7 @@ h3 { font-size: 1.25rem; }
 .internacional p { color: rgba(255, 255, 255, .8); margin-bottom: 10px; }
 .internacional .nota { font-size: .85rem; color: var(--dorado-suave); margin-bottom: 0; }
 .internacional-bandera {
-  flex: 0 0 56px; height: 40px; border-radius: 4px; overflow: hidden;
+  flex: none; width: 56px; height: 40px; border-radius: 4px; overflow: hidden;
   display: grid; grid-template-rows: 1fr 2fr 1fr;
 }
 .internacional-bandera span:nth-child(odd) { background: #c60b1e; }
