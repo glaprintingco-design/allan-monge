@@ -240,7 +240,8 @@ h3 { font-size: 1.25rem; }
 
 /* ===== Video ===== */
 .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radio); overflow: hidden; background: var(--azul-noche); }
-.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video iframe, .video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+.video-nota { margin-top: 12px; font-size: .85rem; color: var(--texto-suave); text-align: center; }
 .video-vacio { display: grid; place-items: center; text-align: center; color: rgba(255, 255, 255, .7); font-family: var(--titulos); font-size: 1.5rem; }
 .video-vacio small { font-family: var(--cuerpo); font-size: .9rem; opacity: .7; }
 
