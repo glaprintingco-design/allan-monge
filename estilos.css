@@ -123,6 +123,7 @@ h3 { font-size: 1.25rem; }
   box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
 }
 .hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.hero-foto .intro { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; cursor: pointer; }
 .foto-reemplazo {
   position: absolute; inset: 0;
   display: grid; place-items: center;

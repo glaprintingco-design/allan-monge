@@ -57,6 +57,9 @@
       <div class="hero-foto">
         <img src="img/foto-perfil.jpg" alt="Allan Monge, portero"
              onerror="this.remove()">
+        <!-- Animación de presentación: se reproduce una vez y termina en la misma foto -->
+        <video class="intro" src="img/intro-portada.mp4" poster="img/intro-portada-inicio.jpg"
+               muted playsinline preload="auto" aria-hidden="true"></video>
         <div class="foto-reemplazo">AM</div>
       </div>
     </div>
@@ -259,5 +262,19 @@
     </div>
   </footer>
 
+  <script>
+    // Si el navegador no puede reproducir la animación (o el usuario prefiere menos movimiento),
+    // se queda la foto fija que está debajo. Tocar la foto repite la animación.
+    (function () {
+      var v = document.querySelector('.hero-foto .intro');
+      if (!v) return;
+      var quitar = function () { v.remove(); };
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return quitar();
+      v.addEventListener('error', quitar);
+      var p = v.play();
+      if (p && p.catch) p.catch(quitar);
+      v.addEventListener('click', function () { v.currentTime = 0; v.play(); });
+    })();
+  </script>
 </body>
 </html>
